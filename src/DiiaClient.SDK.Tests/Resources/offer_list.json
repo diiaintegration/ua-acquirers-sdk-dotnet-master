@@ -1,0 +1,26 @@
+{
+    "total": 2,
+    "offers": [
+        {
+            "_id": "27924...ecb42f44bec9",
+            "name": "Відкриття рахунку",
+            "scopes": {
+                "sharing": [
+                    "passport"
+                ]
+            },
+            "returnLink": "1"
+        },
+        {
+            "_id": "0dc97...d1cc633a81a",
+            "name": "Відкриття рахунку",
+            "scopes": {
+                "sharing": [
+                    "passport",
+                    "taxpayer-card"
+                ]
+            },
+            "returnLink": "1"
+        }
+    ]
+}

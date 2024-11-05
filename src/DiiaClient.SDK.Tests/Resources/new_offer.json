@@ -1,0 +1,9 @@
+{
+    "name": "Назва послуги",
+    "returnLink": "https://test",
+    "scopes": {
+        "sharing": [
+            "passport"
+        ]
+    }
+}

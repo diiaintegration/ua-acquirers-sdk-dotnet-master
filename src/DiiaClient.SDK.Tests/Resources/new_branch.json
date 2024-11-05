@@ -1,0 +1,27 @@
+{
+    "customFullName": "Повна назва запитувача документа",
+    "customFullAddress": "Повна адреса відділення",
+    "name": "Назва відділення",
+    "email": "test@email.com",
+    "region": "Київська обл.",
+    "district": "Києво-Святошинський р-н",
+    "location": "м. Вишневе",
+    "street": "вул. Київська",
+    "house": "2г",
+    "deliveryTypes": [
+        "api"
+    ],
+    "offerRequestType": "dynamic",
+    "scopes": {
+        "sharing": [
+            "passport",
+            "internal-passport",
+            "foreign-passport"
+        ],
+        "identification": [],
+        "documentIdentification": [
+            "internal-passport",
+            "foreign-passport"
+        ]
+    }
+}

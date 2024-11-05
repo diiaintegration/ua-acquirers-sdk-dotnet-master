@@ -1,0 +1,30 @@
+{
+  "_id": "1d441d305adc2bff982fde159f8c91706a68a80b1cff5bd2aebecb43f71f25",
+  "name": "Назва",
+  "email": "test@email.com",
+  "region": "Київська обл.",
+  "district": "Києво-Святошинський р-н",
+  "location": "м. Вишневе",
+  "street": "вул. Київська",
+  "house": "2г",
+  "customFullName": "Повна назва запитувача документа",
+  "customFullAddress": "Повна адреса відділення",
+  "deliveryTypes": [
+    "api"
+  ],
+  "offerRequestType": "dynamic",
+  "scopes": {
+    "sharing": [
+      "passport",
+      "internal-passport",
+      "foreign-passport",
+      "taxpayer-card",
+      "reference-internally-displaced-person"
+    ],
+    "identification": [],
+    "documentIdentification": [
+      "internal-passport",
+      "foreign-passport"
+    ]
+  }
+}
