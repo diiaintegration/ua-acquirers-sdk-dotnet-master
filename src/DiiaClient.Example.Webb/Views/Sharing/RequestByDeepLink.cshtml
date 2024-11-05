@@ -1,0 +1,16 @@
+﻿@model DiiaClient.Example.Web.Models.DeepLinkModel
+@{
+    ViewData["Title"] = "Requesting document by deeplink";
+}
+<h2>To share your document</h2>
+<p>
+    open this URL in your <strong>mobile phone</strong> browser
+</p>
+<a href="@Model.Deeplink">@Model.Deeplink</a>
+<p>or scan this QR code</p>
+<img src="@Model.QrCodeImageBase64"/>
+<p>
+    When you complete document sharing you can see it by
+    <a href="./ShowDocument?requestId=@Model.RequestId" target="_blank">this link</a> (decoded on partner endpoint) and
+    <a href="./DecodeAndShowDocument?requestId=@Model.RequestId" target="_blank">this link</a> (decoded on server-side)
+</p>

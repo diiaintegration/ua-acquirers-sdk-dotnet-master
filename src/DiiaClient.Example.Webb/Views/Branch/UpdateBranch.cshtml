@@ -1,0 +1,34 @@
+﻿@model DiiaClient.Example.Web.Models.CreateBranchModel
+@{
+    ViewData["Title"] = "Update branch";
+}
+
+<form class="col-sm-6 offset-3" action="UpdateBranch" method="post">  
+    <h2>Update branch</h2>
+    <p>Id: <input class="form-control" type="text" name="Id"/></p>
+    <p>Name: <input class="form-control" type="text" name="Name"/></p>
+    <p>Email: <input class="form-control" type="text" name="Email"/></p>
+    <p>Region: <input class="form-control" type="text" name="Region"/></p>
+    <p>District: <input class="form-control" type="text" name="District"/></p>
+    <p>Location: <input class="form-control" type="text" name="Location"/></p>
+    <p>Street: <input class="form-control" type="text" name="Street"/></p>
+    <p>House: <input class="form-control" type="text" name="House"/></p>
+    <p>CustomFullName: <input class="form-control" type="text" name="CustomFullName"/></p>
+    <p>CustomFullAddress: <input class="form-control" type="text" name="CustomFullAddress"/></p>
+    <p>
+        BranchScopes.Sharing (comma-separated): <input class="form-control" type="text" name="Sharing" /><br/>
+        <small>Available: passport,internal-passport,foreign-passport,taxpayer-card</small><br/>
+        <small>Example: passport,taxpayer-card</small>
+    </p>
+    <p>
+        BranchScopes.DocumentIdentification (comma-separated): <input class="form-control" type="text" name="DocumentIdentification" /><br/>
+        <small>Available: internal-passport,foreign-passport,taxpayer-card</small><br/>
+        <small>Example: internal-passport,foreign-passport</small>
+    </p>    
+    <p>
+        BranchScopes.DiiaId (comma-separated): <input class="form-control" type="text" name="DiiaId" /><br/>
+        <small>Available: hashedFilesSigning,auth</small><br/>
+        <small>Example: hashedFilesSigning,auth</small>
+    </p>
+    <p><input type="submit"></p>
+</form>

@@ -1,0 +1,66 @@
+﻿@model DiiaClient.Example.Web.Models.AllBranchesModel
+@{
+    ViewData["Title"] = "All branches";
+}
+
+<h2>List of all registered branches</h2>
+<div class="table-responsive">
+    <table class="table table-bordered table-sm text-center">
+        <thead class="table-light">
+		    <tr>
+			    <th>ID</th>
+			    <th>Name</th>
+			    <th>Email</th>
+			    <th>Region</th>
+			    <th>District</th>
+                <th>Location</th>
+			    <th>Street</th>
+			    <th>House</th>
+                <th>CustomFullName</th>
+                <th>CustomFullAddress</th>
+                <th>OfferRequestType</th>
+                <th>DeliveryTypes</th>
+                <th>BranchScopes.Sharing</th>
+                <th>BranchScopes.DocumentIdentification</th>
+                <th>BranchScopes.DiiaId</th>
+            </tr>
+	    </thead>
+        <tbody>
+		    @foreach(var branch in Model.Branches.Branches)
+            {
+                <tr>
+                    <td>@branch.Id</td>
+                    <td>@branch.Name</td>
+                    <td>@branch.Email</td>
+                    <td>@branch.Region</td>
+                    <td>@branch.District</td>
+                    <td>@branch.Location</td>
+                    <td>@branch.Street</td>
+                    <td>@branch.House</td>
+                    <td>@branch.CustomFullName</td>
+                    <td>@branch.CustomFullAddress</td>
+                    <td>@branch.OfferRequestType</td> 
+                    @{
+                        var dt = branch.DeliveryTypes != null && branch.DeliveryTypes.Count > 0 ? string.Join(", ", branch.DeliveryTypes.ToArray()) : string.Empty;
+                        var sh = branch.Scopes != null && branch.Scopes.Sharing != null && branch.Scopes.Sharing.Count > 0 ? string.Join(", ", branch.Scopes.Sharing.ToArray()) : string.Empty;
+                        var dc = branch.Scopes != null && branch.Scopes.DocumentIdentification != null && branch.Scopes.DocumentIdentification.Count > 0 ? string.Join(", ", branch.Scopes.DocumentIdentification.ToArray()) : string.Empty;
+                        var di = branch.Scopes != null && branch.Scopes.DiiaId != null && branch.Scopes.DiiaId.Count > 0 ? string.Join(", ", branch.Scopes.DiiaId.ToArray()) : string.Empty;
+                    }
+                    <td>@dt</td>
+                    <td>@sh</td>
+                    <td>@dc</td>
+                    <td>@di</td>
+                </tr>
+            }  
+        </tbody>
+    </table>
+</div>
+
+
+<style>
+    .table td, .table th {
+        max-width: 400px;
+        min-width: 160px;
+        word-break: break-all;
+    }
+</style>

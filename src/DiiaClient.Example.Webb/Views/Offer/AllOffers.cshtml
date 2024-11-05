@@ -1,0 +1,47 @@
+﻿@model DiiaClient.Example.Web.Models.AllOffersModel
+@{
+    ViewData["Title"] = "All offers";
+}
+
+<h2>List of all registered offers on branch</h2>
+<div class="table-responsive">
+    <table class="table table-bordered table-sm text-center">
+        <thead class="table-light">
+		    <tr>
+			    <th>ID</th>
+			    <th>Name</th>
+			    <th>Return link</th>
+                <th>BranchScopes.Sharing</th>
+                <th>BranchScopes.DiiaId</th>
+            </tr>
+	    </thead>
+        <tbody>
+		    @foreach(var offer in Model.Offers.Offers)
+            {
+                <tr>
+                    <td>@offer.Id</td>
+                    <td>@offer.Name</td>
+                    <td>@offer.ReturnLink</td>
+                    
+                    @{         
+                        var sh = offer.Scopes != null && offer.Scopes.Sharing != null && offer.Scopes.Sharing.Count > 0 ? string.Join(", ", offer.Scopes.Sharing.ToArray()) : string.Empty;
+                    }
+                    <td>@sh</td>
+                    @{         
+                        var di = offer.Scopes != null && offer.Scopes.DiiaId != null && offer.Scopes.DiiaId.Count > 0 ? string.Join(", ", offer.Scopes.DiiaId.ToArray()) : string.Empty;
+                    }
+                    <td>@di</td>
+                </tr>
+            }  
+        </tbody>
+    </table>
+</div>
+
+
+<style>
+    .table td, .table th {
+        max-width: 400px;
+        min-width: 160px;
+        word-break: break-all;
+    }
+</style>

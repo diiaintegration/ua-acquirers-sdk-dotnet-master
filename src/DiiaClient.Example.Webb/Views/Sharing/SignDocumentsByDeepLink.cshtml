@@ -1,0 +1,15 @@
+﻿@model DiiaClient.Example.Web.Models.DeepLinkModel
+@{
+    ViewData["Title"] = "Sign documents by deeplink";
+}
+<h2>To sign your documents</h2>
+<p>
+    open this URL in your <strong>mobile phone</strong> browser
+</p>
+<a href="@Model.Deeplink">@Model.Deeplink</a>
+<p>or scan this QR code</p>
+<img src="@Model.QrCodeImageBase64"/>
+<p>
+    When you complete document sign you can see it by
+    <a href="./ShowSignDocument?requestId=@Model.RequestId" target="_blank">this link</a>
+</p>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Choose branch";
+}
+<h2>To get all offers on branch</h2>
+<p>
+    Enter the BranchId.
+</p>
+<form enctype="multipart/form-data" action="GetAllOffers" method="post">
+    <dl>
+        <dt>
+            <label>Branch ID</label>
+        </dt>
+        <dd>
+            <p>
+                <input type="text" name="branchId"/>
+            </p>
+        </dd>        
+    </dl>
+    <input class="btn btn-dark" type="submit" value="Continue" />
+</form>

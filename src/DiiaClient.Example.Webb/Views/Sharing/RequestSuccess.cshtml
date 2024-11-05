@@ -1,0 +1,11 @@
+﻿@model DiiaClient.Example.Web.Models.IdModel
+@{
+    ViewData["Title"] = "Document request successfully sent";
+}
+<div>Document is valid</div>
+<div>Document request successfully sent</div>
+<p>
+    When you complete document sharing you can see it by 
+    <a href="./ShowDocument?requestId=@Model.RequestId" target="_blank">this link</a> (decoded on partner endpoint) and
+    <a href="./DecodeAndShowDocument?requestId=@Model.RequestId" target="_blank">this link</a> (decoded on server-side)
+</p>

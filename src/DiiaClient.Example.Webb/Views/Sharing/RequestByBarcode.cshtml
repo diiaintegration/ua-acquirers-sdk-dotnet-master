@@ -1,0 +1,16 @@
+﻿@model DiiaClient.Example.Web.Models.BarcodeModel
+@{
+    ViewData["Title"] = "Requesting document by barcode";
+}
+<h2>To share your document</h2>
+<img runat=”server” src="~/images/barcode.jpg" width="100" />
+<p>
+    enter the barcode from the back-side of document.
+</p>
+<p>
+    Note: use actual barcode from actual document. In other cases you'll receive an exception.
+</p>
+<form action="RequestDocumentByBarcode" method="post">
+    <p>Barcode: <input type="text" name="Barcode"/></p>
+    <p><input type="submit"></p>
+</form>

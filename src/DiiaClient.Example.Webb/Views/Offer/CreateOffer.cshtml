@@ -1,0 +1,22 @@
+﻿@model DiiaClient.Example.Web.Models.CreateOfferModel
+@{
+    ViewData["Title"] = "Create new offer";
+}
+
+<form class="col-sm-6 offset-3" action="CreateOffer" method="post">  
+    <h2>Create new offer on branch</h2>
+    <p>Branch ID: <input class="form-control" type="text" name="BranchId"/></p>
+    <p>Name: <input class="form-control" type="text" name="Name"/></p>
+    <p>ReturnLink: <input class="form-control" type="text" name="ReturnLink"/></p>
+    <p>
+        OfferScopes.Sharing (comma-separated): <input class="form-control" type="text" name="Sharing" /><br/>
+        <small>Available: passport,internal-passport,foreign-passport,taxpayer-card,driver-license,vehicle-license</small><br/>
+        <small>Example: passport,taxpayer-card</small>
+    </p>
+    <p>
+        OfferScopes.DiiaId: <input class="form-control" type="text" name="DiiaId" /><br/>
+        <small>Available: hashedFilesSigning,auth</small><br/>
+        <small>Example: auth</small>
+    </p>
+    <p><input type="submit"></p>
+</form>

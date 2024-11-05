@@ -1,0 +1,26 @@
+﻿@model DiiaClient.Example.Web.Models.BranchModel
+@{
+    ViewData["Title"] = "Get branch";
+}
+
+<h2>Get branch by Id = @Model.Branch.Id</h2>
+<p>Name: <input readonly class="form-control" type="text" value="@Model.Branch.Name"/></p>
+<p>Email: <input readonly class="form-control" type="text" value="@Model.Branch.Email"/></p>
+<p>Region: <input readonly class="form-control" type="text" value="@Model.Branch.Region"/></p>
+<p>District: <input readonly class="form-control" type="text" value="@Model.Branch.District"/></p>
+<p>Location: <input readonly class="form-control" type="text" value="@Model.Branch.Location"/></p>
+<p>Street: <input readonly class="form-control" type="text" value="@Model.Branch.Street"/></p>
+<p>House: <input readonly class="form-control" type="text" value="@Model.Branch.House"/></p>
+<p>CustomFullName: <input readonly class="form-control" type="text" value="@Model.Branch.CustomFullName"/></p>
+<p>CustomFullAddress: <input readonly class="form-control" type="text" value="@Model.Branch.CustomFullAddress"/></p>
+@{
+    var sh = @Model.Branch.Scopes != null && @Model.Branch.Scopes.Sharing != null && @Model.Branch.Scopes.Sharing.Count > 0 ? string.Join(", ", @Model.Branch.Scopes.Sharing.ToArray()) : string.Empty;
+    var dc = @Model.Branch.Scopes != null && @Model.Branch.Scopes.DocumentIdentification != null && @Model.Branch.Scopes.DocumentIdentification.Count > 0 ? string.Join(", ", @Model.Branch.Scopes.DocumentIdentification.ToArray()) : string.Empty;
+}
+<p>
+    BranchScopes.Sharing (comma-separated): <input readonly class="form-control" type="text" value="@sh" /><br/>
+</p>
+<p>
+    BranchScopes.DocumentIdentification (comma-separated): <input readonly class="form-control" type="text" value="@dc" /><br/>
+</p>
+

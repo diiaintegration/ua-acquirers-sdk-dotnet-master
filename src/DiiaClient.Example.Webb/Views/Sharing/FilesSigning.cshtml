@@ -1,0 +1,34 @@
+﻿@model DiiaClient.Example.Web.Models.FilesSigningModel
+@{
+    ViewData["Title"] = "Signing documents";
+}
+<h2>To signing documents</h2>
+<p>
+    Enter the BranchId, OfferId and choose files for signing.
+</p>
+<form enctype="multipart/form-data" action="RequestFilesSigningDeepLink" method="post">
+    <dl>
+        <dt>
+            <label asp-for="BranchId"></label>
+        </dt>
+        <dd>
+            <input asp-for="BranchId" type="text">
+            <span asp-validation-for="BranchId"></span>
+        </dd>
+        <dt>
+            <label asp-for="OfferId"></label>
+        </dt>
+        <dd>
+            <input asp-for="OfferId" type="text">
+            <span asp-validation-for="OfferId"></span>
+        </dd>
+        <dt>
+            <label asp-for="Files"></label>
+        </dt>
+        <dd>
+            <input asp-for="Files" type="file" multiple>
+            <span asp-validation-for="Files"></span>
+        </dd>
+    </dl>
+    <input class="btn btn-dark" type="submit" value="Upload" />
+</form>

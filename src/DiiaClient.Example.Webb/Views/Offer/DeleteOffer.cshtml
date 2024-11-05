@@ -1,0 +1,10 @@
+﻿@model DiiaClient.Example.Web.Models.IdModel
+@{
+    ViewData["Title"] = "Delete offer";
+}
+<h2>Delete offer on branch</h2>
+<form action="DeleteOffer" method="post">
+    <p>Branch ID: <input type="text" name="BranchId"/></p>
+    <p>Offer ID: <input type="text" name="OfferId"/></p>
+    <p><input type="submit"></p>
+</form>
