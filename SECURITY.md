@@ -29,4 +29,3 @@ Response Time: We aim to respond to vulnerability reports within 5 business days
 Confidentiality: We will treat your report with the highest priority and confidentiality. Please avoid disclosing the vulnerability publicly until we have resolved it and published an advisory if necessary.
 
 Thank you for helping us keep the Diia API .NET SDK secure for everyone!
-
